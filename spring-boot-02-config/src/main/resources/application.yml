@@ -1,0 +1,54 @@
+#server:
+#  port: 8081
+#spring:
+#  profiles:
+#    active: dev
+
+#---
+#server:
+#  port: 8083
+
+#spring:
+#  profiles: dev
+
+#---
+
+server:
+  port: 8084
+spring:
+  profiles: prod
+
+
+  #person:
+  #  lastName: zhangsan
+  #  age: 18
+  #  boss: false
+  #  birth: 2017/12/12
+  #  maps: {k1: v1,k2: v2}
+  #  list:
+  #    - lisi
+  #    - zhaoliu
+  #  dog:
+  #    name: 小狗
+  #    age: 2
+
+
+
+
+
+
+  ##键值对集合
+  #friends:
+  # lastName: zhangsan
+  # age: 20
+
+##行内写法 friends: {lastName: zhangsan,age: 18}
+
+
+##数组
+#pets:
+#  - cat
+#  - dog
+#  - pig
+
+##pets: [cat,dog,pig] 行内写法

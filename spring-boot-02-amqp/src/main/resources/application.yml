@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    #建表之后可以不用建了就删除
+    #schema:
+    #  - classpath:sql/department.sql
+    #  - classpath:sql/employee.sql
+    #这个是SpringBoot2.x的设置
+    #initialization-mode: always
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.43.57:3306/spring_cache?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,slf4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#mybaits的全局配置文件
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#mybatis的SQL映射文件
+#  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+#开启驼峰命匹配规则
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
